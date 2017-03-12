@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Insert the title provided by `provide` on each page using Ruby's yield function -->
+    <title><%= yield(:title) %> | Twitter on Rails</title>
+    <!-- Protect against cross-site request forgery -->
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
