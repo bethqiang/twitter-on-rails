@@ -2,10 +2,15 @@
 <html>
   <head>
     <!-- Insert the title provided by `provide` on each page using Ruby's yield function -->
-    <title><%= yield(:title) %> | Twitter on Rails</title>
+    <title><%= full_title(yield(:title)) %></title>
     <!-- Protect against cross-site request forgery -->
     <%= csrf_meta_tags %>
 
+    <!-- Call to a function to include stylesheets with two args:
+         string with stylesheet path & hash with 2 elements
+         Parentheses on function calls are optional
+         When hashes are the last argument in a function call, the curly braces are optional
+         Ruby doesn't distinguish between newlines and other whitespace -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
