@@ -1,9 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
+# Generated automatically when we ran `rails g model User name:string email:string`
 
-two:
-  name: MyString
-  email: MyString
+# Leave this empty for now
